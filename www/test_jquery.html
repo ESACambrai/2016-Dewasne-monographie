@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bienvenue</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		
+		h1{
+			color:#f00
+		}
+		.vert{
+			width: 300px;
+			height: 300px;
+			background: #00ff00;
+		}
+	</style>
+</head>
+<body>
+	<button>bouton</button>
+	<div class="vert"></div>
+
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script>
+		
+	$(document).ready(function(){
+		console.log("ok");
+		$('button').click(function(event){
+			console.log(event);
+			$('h1').toggle('slow');
+
+			$(".vert")
+			.animate({
+					'width':600,
+					'height':200,
+			},2000)
+			.animate({
+					'width':200,
+					'height':600
+			},2000);
+		})
+
+	})
+
+	</script>
+</body>
+</html>
